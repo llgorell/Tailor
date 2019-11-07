@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tailoring</string>
+    <string name="m_nav_home">خانه</string>
+    <string name="m_nav_measure">ابزار</string>
+    <string name="m_nav_fav">محبوب</string>
+
+
 </resources>
