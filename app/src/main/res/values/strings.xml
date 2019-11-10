@@ -4,6 +4,31 @@
     <string name="m_nav_measure">ابزار</string>
     <string name="m_nav_fav">محبوب</string>
 
+    <!-- asamie andazeh ha -->
+    <string name="size_person_doregardan">دور گردن</string>
+    <string name="size_person_sarshane">سرشانه</string>
+    <string name="size_person_ghadebalatanejolo">قد بالا تنه جلو</string>
+    <string name="size_person_ghadebalataneposh">قد بالا تنه پشت</string>
+    <string name="size_person_ghadesine">قد سینه</string>
+    <string name="size_person_faselesine">فاصله سینه</string>
+    <string name="size_person_karorojolo">کارور جلو</string>
+    <string name="size_person_karorposh">کارور پشت</string>
+    <string name="size_person_doresine">دور سینه</string>
+    <string name="size_person_dorekamar">دور کمر</string>
+    <string name="size_person_dorebasanbozorg">دور باسن بزرگ</string>
+    <string name="size_person_dorebazo">دور بازو</string>
+    <string name="size_person_doremoch">دور مچ</string>
+    <string name="size_person_doreran">دور ران</string>
+    <string name="size_person_dorezano">دور زانو</string>
+    <string name="size_person_ghadebasanbozorg">قد باسن بزرگ</string>
+    <string name="size_person_ghadeastin">قد آستین</string>
+    <string name="size_person_ghadelebas">قد لباس</string>
+    <string name="size_person_ghadezano">قد زانو</string>
+    <string name="size_person_doredompa">دور دم پا</string>
+    <string name="size_person_ghadeshalvar">قد شلوار</string>
+    <string name="size_person_anforshor">آنفورشور</string>
+    <string name="size_person_antizhanp">آنتی ژانپ</string>
+    <string name="size_person_ghadefagh">قد فاق</string>
 
 
 </resources>

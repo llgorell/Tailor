@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/scrollView2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:scaleType="fitStart"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_bg_addghest" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_main_addghest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_addghest_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/sw_sizes"
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="16dp"
+                android:layoutDirection="rtl"
+                android:paddingStart="100dp"
+                android:paddingEnd="100dp"
+                android:text="افزودن اندازه ها"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tv_phone" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="ثبت مشتری"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/l_addprsn_sarshane"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/l_addprsn_dorgardan"
+                app:layout_constraintTop_toBottomOf="@id/sw_sizes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_sarshane"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="سرشانه" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/l_addprsn_dorgardan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintLeft_toRightOf="@id/l_addprsn_sarshane"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sw_sizes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_doregardan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="دورگردن" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_tv_lastname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_phone_vector"
+                    android:hint="شماره تماس" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_tv_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_tv_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_account_circle_vector"
+                    android:hint="نام خانوادگی" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_account_circle_vector"
+                    android:hint="نام" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghdbalatanejolo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/l_addprsn_dorgardan"
+                app:layout_constraintStart_toStartOf="@+id/l_addprsn_dorgardan"
+                app:layout_constraintTop_toBottomOf="@+id/l_addprsn_dorgardan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadebalatane"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="قد بالا تنه جلو" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadbalataneposh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/l_addprsn_sarshane"
+                app:layout_constraintStart_toStartOf="@+id/l_addprsn_sarshane"
+                app:layout_constraintTop_toBottomOf="@+id/l_addprsn_sarshane">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadebalataneposht"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="قد بالا تنه پشت" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadesine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghdbalatanejolo"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghdbalatanejolo"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghdbalatanejolo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadesine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadesine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_faselesine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadbalataneposh"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadbalataneposh"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadbalataneposh">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_faselesine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_karorjolo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadesine"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadesine"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadesine">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_karorjolo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_karorojolo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_karorposht"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_faselesine"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_faselesine"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_faselesine">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_karorposht"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_karorposh" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_doresine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_karorjolo"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_karorjolo"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_karorjolo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_doresine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_doresine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_dorekamar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_karorposht"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_karorposht"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_karorposht">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_dorekamar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_dorekamar" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_dorebasanbozorg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_doresine"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_doresine">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_dorebasanbozorg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_dorebasanbozorg" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_dorebazo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_dorekamar"
+                app:layout_constraintStart_toStartOf="@id/tl_addprsn_dorekamar"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_dorekamar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_dorebazo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_dorebazo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_moch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_dorebasanbozorg"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_dorebasanbozorg"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_dorebasanbozorg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_doremoch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_doremoch" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_doreran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_dorebazo"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_dorebazo"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_dorebazo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_doreran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_doreran" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_dorezano"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_moch"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_moch"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_moch">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_dorezano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_dorezano" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_dorepa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_doreran"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_doreran"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_doreran">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_doredompa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_doredompa" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadebasanbozorg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_dorezano"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_dorezano"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_dorezano">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadebasanbozorg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadebasanbozorg" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadeastin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_dorepa"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_dorepa"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_dorepa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadeleastin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadeastin" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadelebas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadebasanbozorg"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadebasanbozorg"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadebasanbozorg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadelebas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadelebas" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadezano"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadeastin"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadeastin"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadeastin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadezano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadezano" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadeshalvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadelebas"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadelebas"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadelebas">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadeshalvar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadeshalvar" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_anforshor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadezano"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadezano"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadezano">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_anforshor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_anforshor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_antijonp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_ghadeshalvar"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_ghadeshalvar"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_ghadeshalvar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_antijonp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_antizhanp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_addprsn_ghadefagh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tl_addprsn_anforshor"
+                app:layout_constraintStart_toStartOf="@+id/tl_addprsn_anforshor"
+                app:layout_constraintTop_toBottomOf="@+id/tl_addprsn_anforshor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_addprsn_ghadefagh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/size_person_ghadefagh" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_icon"
+            app:layout_constraintBottom_toTopOf="@+id/cons_main_addghest"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/cons_main_addghest"
+            app:srcCompat="@drawable/ic_assignment_vector" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
